@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yarg.projects</groupId>
+  <artifactId>SerialToI2C</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Serial to I2C</name>
+  <description>Serial to I2C.</description>
+  
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.fazecast</groupId>
+  		<artifactId>jSerialComm</artifactId>
+  		<version>2.0.2</version>
+  	</dependency>
+  </dependencies>
+</project>
