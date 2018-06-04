@@ -3,7 +3,7 @@ package com.yarg.serial;
 public interface I2C {
 
 	/**
-	 * Output the current serial device configuration.
+	 * Get the current serial device configuration.
 	 * @return String describing the serial device configuration.
 	 */
 	public String serializeDevice();

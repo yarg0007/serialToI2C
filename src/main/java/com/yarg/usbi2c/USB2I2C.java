@@ -87,7 +87,26 @@ public class USB2I2C implements I2C {
 		}
 	}
 
+	/**
+	 * Serialize all attached serial devices without instantiating any specific device.
+	 */
+	public static void serializeAllAttachedDevices() {
 
+		SerialPort[] serialPorts = SerialPort.getCommPorts();
+		for (SerialPort serialPort : serialPorts) {
+
+			String output = String.format("port name: %s%nport description: %s%nbaud rate: %d%ncts: %b%ndsr: %b%nflow control settings: %d%nsystem port name: %s",
+					serialPort.getDescriptivePortName(),
+					serialPort.getPortDescription(),
+					serialPort.getBaudRate(),
+					serialPort.getCTS(),
+					serialPort.getDSR(),
+					serialPort.getFlowControlSettings(),
+					serialPort.getSystemPortName());
+			System.out.println(output);
+			System.out.println("---");
+		}
+	}
 
 
 
