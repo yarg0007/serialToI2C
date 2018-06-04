@@ -6,6 +6,8 @@ import com.yarg.serial.I2C;
 /**
  * Implementation of: USB-I2C serial device module for communicating with I2C devices over a USB connection.
  *
+ * Default read & write timeout is 100 milliseconds.
+ *
  * Product Page: http://www.robot-electronics.co.uk/products/communication-adapters/interface-modules/usb-to-i2c-interface-module.html
  * Technical Documenatation: http://www.robot-electronics.co.uk/htm/usb_i2c_tech.htm
  *
@@ -15,8 +17,8 @@ import com.yarg.serial.I2C;
 public class USB2I2C implements I2C {
 
 	private SerialPort usbi2c;
-	private int readTimeout = 500;
-	private int writeTimeout = 500;
+	private int readTimeout = 100;
+	private int writeTimeout = 100;
 
 	public USB2I2C() {
 		usbi2c= SerialPort.getCommPort("cu.usbserial-A60129CO");

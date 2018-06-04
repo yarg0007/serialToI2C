@@ -2,6 +2,7 @@ package com.yarg.root;
 
 import java.math.BigInteger;
 
+import com.yarg.serial.I2C;
 import com.yarg.usbi2c.USB2I2C;
 
 public class SerialRoot {
@@ -13,7 +14,7 @@ public class SerialRoot {
 
 		USB2I2C.serializeAllAttachedDevices();
 
-		USB2I2C device = new USB2I2C();
+		I2C device = new USB2I2C();
 		String output = device.serializeDevice();
 		System.out.println(output);
 
