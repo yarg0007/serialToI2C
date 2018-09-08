@@ -1,5 +1,11 @@
 package com.yarg.serial;
 
+/**
+ * Extend the functionality of I2CDevice. This interface is intended to be used in conjunction with
+ * I2CDevice to provide initialization and shutdown helpers around the I2CDevice instances being used.
+ * @author ben
+ *
+ */
 public interface I2C {
 
 	/**
@@ -19,38 +25,6 @@ public interface I2C {
 	 * @param timeout Timeout in milliseconds.
 	 */
 	public void setWriteTimeout(int timeout);
-
-	/**
-	 * Send the byte array to the I2C device.
-	 *
-	 * @param bytes
-	 *            Byte array to be sent.
-	 * @param numBytesToReceive
-	 *            The number of bytes expected to receive. This must match or
-	 *            exceed the number of bytes that will be returned. If this
-	 *            exceeds the number of bytes to be returned then you will have
-	 *            to wait for the response timeout to occur before receiving
-	 *            data back.
-	 * @return Bytes returned from I2C device.
-	 */
-	public byte[] sendBytes(byte[] bytes, int numBytesToReceive);
-
-	/**
-	 * Send the byte array to the I2C device.
-	 *
-	 * @param bytes
-	 *            Byte array to be sent.
-	 * @param numBytesToSend
-	 *            The number of bytes to send.
-	 * @param bytesToReceive
-	 *            The number of bytes expected to receive. This must match or
-	 *            exceed the number of bytes that will be returned. If this
-	 *            exceeds the number of bytes to be returned then you will have
-	 *            to wait for the response timeout to occur before receiving
-	 *            data back.
-	 * @return Bytes returned from I2C device.
-	 */
-	public byte[] sendBytes(byte[] bytes, int numBytesToSend, int bytesToReceive);
 
 	/**
 	 * Open the serial device connection.

@@ -49,13 +49,11 @@ public class USB2I2C implements I2C {
 		usbi2c.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, readTimeout, writeTimeout);
 	}
 
-	@Override
 	public byte[] sendBytes(byte[] bytes, int bytesToReceive) {
 
 		return sendBytes(bytes, bytes.length, bytesToReceive);
 	}
 
-	@Override
 	public byte[] sendBytes(byte[] bytes, int numBytesToSend, int numBytesToReceive) {
 
 		int resultOfWrite = usbi2c.writeBytes(bytes, numBytesToSend);
