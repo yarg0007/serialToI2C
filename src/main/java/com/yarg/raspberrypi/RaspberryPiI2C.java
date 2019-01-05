@@ -22,13 +22,11 @@ public class RaspberryPiI2C implements I2C {
 
 	}
 
-	@Override
 	public byte[] sendBytes(byte[] bytes, int numBytesToSend, int numBytesToReceive) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public byte[] sendBytes(byte[] bytes, int numBytesToReceive) {
 		// TODO Auto-generated method stub
 		return null;

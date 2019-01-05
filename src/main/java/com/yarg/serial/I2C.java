@@ -3,7 +3,8 @@ package com.yarg.serial;
 /**
  * Extend the functionality of I2CDevice. This interface is intended to be used in conjunction with
  * I2CDevice to provide initialization and shutdown helpers around the I2CDevice instances being used.
- * @author ben
+ *
+ * @author Ben Yarger <benjamin.yarger@gmail.com>
  *
  */
 public interface I2C {
